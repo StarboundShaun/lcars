@@ -1,4 +1,15 @@
 {
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
   "type": "module",
   "scripts": {
     "start": "npm run dev",
@@ -16,12 +27,25 @@
   },
   "devDependencies": {
     "@types/howler": "2.2.11",
+    "@typescript-eslint/eslint-plugin": "8.10.0",
+    "@typescript-eslint/parser": "8.10.0",
     "@vitejs/plugin-vue": "5.1.2",
+    "@vue/eslint-config-prettier": "10.0.0",
+    "@vue/eslint-config-typescript": "14.1.1",
     "autoprefixer": "10.4.20",
+    "eslint": "9.13.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "husky": "9.1.6",
+    "lint-staged": "15.2.10",
     "postcss": "8.4.41",
+    "prettier": "3.3.3",
     "tailwindcss": "3.4.10",
     "typescript": "5.5.4",
     "vite": "5.4.2",
     "vite-svg-loader": "5.1.0"
+  },
+"scripts": {
+    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "lint:fix": "eslint --ext .js,.ts,.vue --ignore-path .gitignore . --fix"
   }
 }
