@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { initSounds } from './utils/sounds'
 import { setupResizeObserver } from './utils/resize-observer'
 import App from './App.vue'
-import Transmission from './Transmission.vue'
+import Transmission from './TransmissionComponent.vue'
 import OmegaDirective from './OmegaDirective.vue'
 import './styles/index.css';
 import './styles/typography.css';
